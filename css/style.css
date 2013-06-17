@@ -47,5 +47,5 @@ p {font-size:2em}
 	Buttons														
 +----------------------------------------------------------------+
 */
-.social {margin:0 auto; width:220px}
+.social {margin:0 auto 10px; width:220px}
 .social > div {float:left; margin-right:15px}
