@@ -52,6 +52,12 @@ var Social = {
         } else {
             self.getScript('//apis.google.com/js/plusone.js');
         }
+
+        if (typeof (IN) != 'undefined') {
+            IN.parse();
+        } else {
+            self.getScript("//platform.linkedin.com/in.js");
+        }
     }
 }
 
