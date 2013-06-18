@@ -46,9 +46,10 @@ var Social = {
 
         if (typeof (gapi) != 'undefined') {
             var matches = document.body.querySelectorAll('.g-plusone');
-            matches.each(function() {
-                gapi.plusone.render(this);
-            });
+            var index = 0, length = matches.length;
+            while (index++ < length) {
+                gapi.plusone.go();
+            }
         } else {
             self.getScript('//apis.google.com/js/plusone.js');
         }
