@@ -10,10 +10,7 @@ Simple way to load social sharing buttons
 <script type="text/javascript" src="src/social.js"></script>
 ```
 
-2. From within a script tag or a JS file
-```javascript	
-	Social.init();
-```
+2. Enjoy.
 
 ## License
 
