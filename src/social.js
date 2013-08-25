@@ -1,6 +1,6 @@
 /*
 *
-* Social 2.1
+* Social 2.2
 * Copyright 2013, Pedro Rogerio (https://github.com/pinceladasdaweb)
 * Description: Lazy Loader Social Buttons
 * Licensed under the WTFPL licenses (http://www.wtfpl.net/).
@@ -21,10 +21,12 @@ var Social = {
                 if (callback && typeof ("callback") === "function") {
                     callback();
                 }
+                script.onload = script.onreadystatechange = null; // Handle memory leak in IE
             }
         }
 
         head.appendChild(script);
+        return undefined; // We handle everything using the script element injection
     },
     fetch: function () {
         var self = this;
@@ -58,6 +60,6 @@ var Social = {
             self.getScript("//platform.linkedin.com/in.js");
         }
     }
-}
+};
 
 Social.init();
